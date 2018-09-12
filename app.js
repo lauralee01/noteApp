@@ -23,7 +23,7 @@ if (command === 'add') {
 } else if (command === 'list') {
 	notes.getAll();
 } else if (command === 'read') {
-	var note = notes.getNote(argv.title, argv.body);
+	var note = notes.getNote(argv.title);
 	if (note) {
 		console.log('Note avalable!');
 		notes.logNote(note);

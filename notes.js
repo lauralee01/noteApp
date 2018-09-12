@@ -21,13 +21,12 @@ var addNote = (title, body) => {
 		title,
 		body
 	};
-
-	var duplicateNotes = notes.filter((note) => note.title === title);
+var duplicateNotes = notes.filter((note) => note.title === title);
 
 	if (duplicateNotes.length === 0 ) {
 		notes.push(note);
 		saveNotes(notes);
-		return notes;
+		return note;
 	}
 };
 
@@ -50,6 +49,7 @@ var removeNote = (title) => {
 };
 
 var logNote = (note) => {
+	debugger;
 	console.log('--');
 	console.log(`Title: ${note.title}`);
 	console.log(`Body: ${note.body}`);
